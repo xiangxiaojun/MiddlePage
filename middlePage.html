@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <script>
+        function redirectToTarget() {
+            var url = new URLSearchParams(window.location.search).get('url');
+            if (url) {
+                window.location.href = url;
+            } else {
+                alert('缺少必要的参数');
+            }
+        }
+        // 页面加载完成后执行跳转
+        window.onload = redirectToTarget;
+    </script>
+</head>
+
+<body>
+    <h1>正在跳转，请稍候...</h1>
+</body>
+
+</html>
